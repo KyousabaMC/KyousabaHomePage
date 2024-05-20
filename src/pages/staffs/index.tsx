@@ -111,6 +111,7 @@ export default function Staffs() {
                         <div>
                             {Object.keys(staffProfiles).map(key => (
                                 <ProfileCard
+                                        key={key}
                                         name={key}
                                         msg={staffProfiles[key].msg}
                                         labelText={staffProfiles[key].labelText}

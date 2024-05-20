@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { M_PLUS_1p } from 'next/font/google'
 import styles from '@/styles/pages/Home.module.css'
 import Header from '@/components/utils/header'
+import Image from 'next/image';
 
 const m_plus_1p_700_font = M_PLUS_1p({
   weight: "700",

@@ -181,7 +181,7 @@ export default function News() {
                         
 
                             return (
-                                <div className={styles.news}>
+                                <div key={post.id} className={styles.news}>
                                     <div>
                                         <Link href={`/news/${post.id}`}>
                                             <PostCard

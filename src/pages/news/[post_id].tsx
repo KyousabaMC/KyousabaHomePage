@@ -182,7 +182,7 @@ export default function News() {
                             const date = new Date(post.date);
                             
                             return (
-                                <div className={styles.news}>
+                                <div key={post.id} className={styles.news}>
                                     <div className={styles.pageHeader}>
                                         <div className={styles.textArea}>
                                             <p className={styles.category}>

@@ -11,6 +11,7 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import styles from '@/styles/components/utils/Header.module.css';
 import Frame from './frame';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const terms = [
   { name: '利用規約', description: 'みんなが気持ちよくプレイするために遵守頂く規約です。', href: '#', icon: ScaleIcon },
@@ -37,7 +38,7 @@ export default function Header() {
             <Frame />
             <header className={styles.headerChild}> { /* className='bg-zinc-800' */}
                 <nav className="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-12" aria-label="Global" style={{ height: "5rem" }}>
-                    <div className="flex lg:flex-2 p-2 -m-3">
+                    <div className="flex p-2 -m-3">
                         <Link href="/" className="-m-1 p-1">
                             <span className="sr-only">今日鯖</span>
                             <img className={styles.logo} src="/img/logo/long.png" alt="" />
@@ -51,26 +52,26 @@ export default function Header() {
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">メニューを開く</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                            <Bars3Icon className="size-6" aria-hidden="true" />
                         </button>
                         </div>
 
                         { /* 今日鯖について */}
                         <div className={styles.links}>
                             <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                                <Link href="/#about" className="text-lm font-normal leading-6">
+                                <Link href="/#about" className="font-normal leading-6">
                                     今日鯖について
                                 </Link>
 
-                                <Link href="/news" className="text-lm font-normal leading-6">
+                                <Link href="/news" className="font-normal leading-6">
                                     ニュース
                                 </Link>
 
                                 { /* ルール/規約 */}
                                 <Popover className="relative">
-                                    <Popover.Button className="flex items-center gap-x-1 text-lm font-normal leading-6">
+                                    <Popover.Button className="flex items-center gap-x-1 font-normal leading-6">
                                     ルール/規約
-                                    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                                    <ChevronDownIcon className="size-5 flex-none text-gray-400" aria-hidden="true" />
                                     </Popover.Button>
 
                                     <Transition
@@ -90,16 +91,16 @@ export default function Header() {
                                                     key={item.name}
                                                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-zinc-200"
                                                     >
-                                                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white bg-zinc-100 group-hover:bg-zinc-100">
-                                                            <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                                                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-zinc-100 group-hover:bg-zinc-100">
+                                                            <item.icon className="size-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                                                         </div>
                                                         <div className={styles.dropdownMenuLink}>
                                                             <div className="flex-auto">
-                                                                <Link href={item.href} className="block font-semibold text-white-100">
+                                                                <Link href={item.href} className="block font-semibold">
                                                                 {item.name}
                                                                 <span className="absolute inset-0" />
                                                                 </Link>
-                                                                <p className="mt-1 text-white-900">{item.description}</p>
+                                                                <p className="mt-1">{item.description}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -110,14 +111,14 @@ export default function Header() {
                                     </Transition>
                                 </Popover>
 
-                                <Link href="/staffs" className="text-lm font-normal leading-6 text-white-900">
+                                <Link href="/staffs" className="font-normal leading-6">
                                     運営紹介
                                 </Link>
 
                                 <Popover className="relative">
-                                    <Popover.Button className="flex items-center gap-x-1 text-lm font-normal leading-6 text-white-900">
+                                    <Popover.Button className="flex items-center gap-x-1 font-normal leading-6">
                                     外部リンク
-                                    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                                    <ChevronDownIcon className="size-5 flex-none text-gray-400" aria-hidden="true" />
                                     </Popover.Button>
 
                                     <Transition
@@ -136,16 +137,16 @@ export default function Header() {
                                                 key={item.name}
                                                 className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-zinc-200"
                                                 >
-                                                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-white bg-zinc-100 group-hover:bg-zinc-100">
-                                                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                                                    <div className="flex size-11 flex-none items-center justify-center rounded-lg group-hover:bg-zinc-100">
+                                                        <item.icon className="size-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                                                     </div>
                                                     <div className={styles.dropdownMenuLink}>
                                                         <div className="flex-auto">
-                                                            <Link href={item.href} className="block font-semibold text-white-100">
+                                                            <Link href={item.href} className="block font-semibold">
                                                             {item.name}
                                                             <span className="absolute inset-0" />
                                                             </Link>
-                                                            <p className="mt-1 text-white-900">{item.description}</p>
+                                                            <p className="mt-1">{item.description}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -159,11 +160,11 @@ export default function Header() {
                     </nav>
                     <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                         <div className="fixed inset-0 z-10" />
-                            <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-zinc-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                            <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-zinc-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                             <div className="flex items-center justify-between">
                                 <Link href="/" className="m-1.5 p-1.5 text-white-900">
                                     <span className="sr-only">今日鯖</span>
-                                    <img
+                                    <Image
                                         className="h-8 w-auto"
                                         src="/img/logo/long.png"
                                         alt=""

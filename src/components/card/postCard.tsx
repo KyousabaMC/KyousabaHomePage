@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from "@/styles/components/card/PostCard.module.css"
 import { Tooltip } from "@chakra-ui/react";
 import { ReactNode, MouseEvent } from "react"
@@ -23,13 +24,13 @@ export const PostCard = (props: PostProps) => {
     return (
         <>
             <div className={styles.postCard}>
-                <img className={styles.image} src={props.image} />
+                <img className={styles.image} src={props.image} alt='' />
                 <div className={styles.textArea}>
                     <p className={styles.category}>{props.categories}</p>
                     <p className={styles.title}>{props.title}</p>
                     <p className={styles.date}>{date.toLocaleString("ja-JP", {year: "numeric", month: "numeric", day: "numeric"})}</p>
                 </div>
-                <img className={styles.authorIcon} src={`https://minotar.net/helm/${props.author}`} />
+                <img className={styles.authorIcon} src={`https://minotar.net/helm/${props.author}`} alt='' />
             </div>
         </>
     );

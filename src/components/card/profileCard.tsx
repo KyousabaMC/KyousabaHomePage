@@ -1,5 +1,6 @@
 import styles from "@/styles/components/card/ProfileCard.module.css"
 import { Tooltip } from "@chakra-ui/react";
+import Image from "next/image";
 import { ReactNode, MouseEvent } from "react"
 
 interface ProfileProps {
@@ -26,7 +27,7 @@ export const ProfileCard = (props: ProfileProps) => {
     let labelImage: ReactNode
     if (props.labelImg != "") {
         labelImage = (
-            <img className="labelImg" src={props.labelImg} onContextMenu={handleContextMenu} />
+            <Image width={0} height={0} className="labelImg" src={props.labelImg} onContextMenu={handleContextMenu} alt="" />
         )
     }
 
@@ -55,7 +56,7 @@ export const ProfileCard = (props: ProfileProps) => {
                 snsSites.push(
                     <p className={styles.snsInfo}>
                         <Tooltip label={"@"+serviceUrl}>
-                            <img src={"/img/snsLogo/"+serviceName+".svg"} alt="" />
+                            <Image width={0} height={0} src={"/img/snsLogo/"+serviceName+".svg"} alt="" />
                         </Tooltip>
                     </p>
                 )
@@ -65,7 +66,7 @@ export const ProfileCard = (props: ProfileProps) => {
                 snsSites.push(
                     <p className={styles.snsInfo}>
                         <a href={serviceUrl}>
-                            <img src={"/img/snsLogo/"+serviceName+".svg"} alt="" />
+                            <Image width={0} height={0} src={"/img/snsLogo/"+serviceName+".svg"} alt="" />
                         </a>
                     </p>
                 )
@@ -82,8 +83,8 @@ export const ProfileCard = (props: ProfileProps) => {
 
             <div className={styles.msg}><div><p>{props.msg}</p></div></div>
             <span className={styles.userIcon}>
-                <img src={props.iconUrl} onContextMenu={handleContextMenu} />
-                <div className={styles.iconProtect}><img src="/img/dummy.jpeg" onContextMenu={handleContextMenu} /></div>
+                <Image width={128} height={0} src={props.iconUrl} onContextMenu={handleContextMenu} alt="" />
+                <div className={styles.iconProtect}><Image width={0} height={0} src="/img/dummy.jpeg" alt="" onContextMenu={handleContextMenu} /></div>
             </span>
             <h2 className={styles.userName}>{props.name}</h2>
             <p className={styles.description}>{props.description}</p>
