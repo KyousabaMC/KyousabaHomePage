@@ -1,0 +1,183 @@
+.frame {
+    z-index: 99;
+}
+@media screen and (min-width: 1024px) {
+    .frame {
+        position: relative;
+        left: -1.5rem;
+    }
+}
+
+
+.borders div{
+    position: fixed;
+    background-color: rgb(172, 202, 38);
+}
+
+.borderTop {
+    top: 0;
+    height: 1rem;
+    width: 100%;
+}
+.borderBottom {
+    bottom: 0;
+    height: 1.5rem;
+    width: 100vw;
+}
+
+
+.borderRight {
+    right: 0;
+    height: 100vh;
+    width: 1.5rem;
+}
+.borderLeft {
+    left: 0;
+    height: 100vh;
+    width: 1.5rem;
+}
+
+
+.corners {
+    position: fixed;
+    width: 100%;
+    height: 1rem;
+    top: -1.5rem;
+}
+.corners span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    transform: translateX(-100%);
+}
+
+.cornerTopRight{
+    right: 0;
+}
+.cornerTopRight::before {
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: relative;
+    top: calc(4rem - 0rem);
+    right: 0.25rem;
+    overflow: hidden;
+
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 20px -20px 0 0 rgb(172, 202, 38);
+    transform: translate(-50%, -50%);
+}
+
+.cornerTopLeft {
+    left: 0;
+}
+.cornerTopLeft::before {
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: calc(4rem - 0rem);
+    left: 4rem;
+    overflow: hidden;
+
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -20px -20px 0 0 rgb(172, 202, 38);
+    transform: translate(-50%, -50%);
+}
+
+.cornerBottomRight {
+    right: 0;
+}
+.cornerBottomRight::before {
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    bottom: 0.2em;
+    right: 0rem;
+    overflow: hidden;
+
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 20px 20px 0 0 rgb(172, 202, 38);
+    transform: translate(-50%, -50%);
+}
+
+.cornerBottomLeft {
+    left: 0;
+}
+.cornerBottomLeft::before {
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    bottom: 0.2em;
+    right: -5.2rem;
+    overflow: hidden;
+
+    content: '';
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: -20px 20px 0 0 rgb(172, 202, 38);
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1023px) {
+    .borderRight, .borderLeft {
+        display: none;
+    }
+
+    .cornerTopRight::before, .cornerTopLeft::before, .cornerBottomRight::before, .cornerBottomLeft::before {
+        display: none;
+    }
+
+    .hamburgerMenuBack {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 6rem;
+    }
+    .hamburgerMenuBack div {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4.5rem;
+        height: 6rem;
+        background-color: rgb(172, 202, 38);
+        border-bottom-left-radius: 25%;
+    }
+    .hamburgerMenuBack span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: 0px;
+        transform: translateX(-100%);
+    }
+
+    .hamburgerMenuCornerTop {
+        right: 0;
+    }
+    .hamburgerMenuCornerTop::before {
+        display: block;
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: calc(4rem - 6.5rem);
+        right: 2rem;
+        overflow: hidden;
+    
+        content: '';
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: 20px -20px 0 0 rgb(172, 202, 38);
+        transform: translate(-50%, -50%);
+    }
+}

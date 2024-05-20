@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap'); /* Mochiy Pop One */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap'); /* M PLUS 2 */
+
+@media screen and (min-width: 401px) {
+    .postCard {
+        width: clamp(300px, 40vw, 400px);
+        margin: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .postCard {
+        max-width: 350px;
+        min-width: 300px;
+    }
+}
+
+.postCard {
+    height: 400px;
+    text-align: left;
+    margin-top: 60px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.image {
+    border-radius: 15px;
+}
+
+.textArea {
+    font-family: "M PLUS 2";
+}
+
+.category {
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.title {
+    margin: 15px 5px 5px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.date {
+    margin: 20px 0 0 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.authorIcon {
+    position: relative;
+    top: -40px;
+    left: calc(100% - 40px);
+    width: 40px;
+    border-radius: 5px;
+}

@@ -1,0 +1,13 @@
+div .profileSection {
+    width: 100%;
+    height: 100%;
+}
+
+.profiles {
+    width: 100%;
+    text-align: center;
+}
+
+.profiles div {
+    display: inline-block;
+}

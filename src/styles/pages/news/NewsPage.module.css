@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap'); /* M PLUS 2 */
+
+.news {
+    color: rgb(47, 102, 25);
+}
+
+@media screen and (min-width: 1024px) {
+    .pageHeader {
+        max-width: 1000px;
+        width: 60%;
+    }
+}
+.pageHeader {
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+}
+@media screen and (min-width: 1024px) {
+    .content {
+        max-width: 1000px;
+        width: 60%;
+    }
+}
+.content {
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+}
+
+.textArea {
+    position: relative;
+}
+
+.category {
+    color: rgb(55, 119, 30);
+    font-family: "M PLUS 2";
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.categoryNews {
+    text-decoration-line: underline;
+}
+
+.title {
+    font-family: "M PLUS 2";
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.createdAt {
+    font-family: "M PLUS 2";
+    font-size: 16px;
+}
+
+.authorIcon {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.authorIcon img {
+    position: absolute;
+    top: -50px;
+    width: 50px;
+    right: 0;
+
+    border-radius: 5px;
+}
+
+.eyeCatchingImg {
+    border-radius: 25px;
+    margin: 0 auto;
+}

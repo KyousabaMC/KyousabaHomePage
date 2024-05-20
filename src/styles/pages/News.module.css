@@ -1,0 +1,15 @@
+.newsSection {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 401px) {
+  .newsSection {
+    margin-left: 0;
+  }
+}
+
+.newsSection .news {
+  display: inline-block;
+  text-align: center;
+}
